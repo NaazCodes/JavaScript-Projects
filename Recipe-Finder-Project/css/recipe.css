@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Segoe UI", Roboto, "Open Sans", sans-serif;
+  background-image: radial-gradient(
+      circle,
+      rgba(49, 47, 47, 0.3),
+      rgba(0, 0, 0, 0.7),
+      rgb(35, 32, 32)
+    ),
+    url("../images/doodles.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  color: rgb(194, 178, 149);
+  background: linear-gradient(
+    135deg,
+    rgba(58, 58, 58, 0.8),
+    rgba(20, 20, 20, 0.9)
+  );
+  border-radius: 10px;
+  box-shadow: 0 0 5px #fbf2d5, 0 0 10px #fbf2d5, 0 0 20px #fbf2d5;
+}
+
+#recipe-name {
+  font-size: 3rem;
+  color: rgb(163, 137, 88);
+  width: 100%;
+  text-align: center;
+   margin-top: 20px;
+}
+
+#recipe-image {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#ingredients,
+#instructions {
+  font-size: 1.3rem;
+}
+
+#instructions {
+  width: 80%;
+  text-align: justify;
+  white-space: pre-line;
+}
+
+.separator {
+  display: inline-block;
+}
+
+.recipe-h2 {
+  font-size: 2rem;
+  color: rgb(142, 127, 100);
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0) 0%,
+    rgb(75, 70, 70) 50%,
+    rgba(255, 0, 0, 0) 100%
+  );
+}
+
+.link-div {
+  text-align: center;
+  margin: 50px;
+}
+
+.hp-link {
+  background: linear-gradient(
+    135deg,
+    rgba(151, 148, 148, 0.8),
+    rgba(47, 47, 47, 0.9)
+  );
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(228, 217, 195);
+}
+
+.hp-link:hover {
+  background-color: rgba(194, 179, 163, 0.6);
+  color: white;
+}
+
+#video-container {
+  margin-bottom: 45px;
+}
+
+#video-container iframe {
+  height: 330px;
+  width: 470px;
+  border-radius: 20px;
+  background-image: linear-gradient(rgba(198, 177, 156, 0.6));
+  border-radius: 10px;
+  box-shadow: 0 0 5px #fbf2d5, 0 0 10px #fbf2d5;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top: 6px solid #f44336;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .main {
+    width: 75%;
+    gap: 25px;
+  }
+
+  #recipe-name {
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+
+  .recipe-h2 {
+    font-size: 1.4rem;
+  }
+
+  #recipe-image {
+    height: 120px;
+    width: 120px;
+  }
+
+  #ingredients,
+  #instructions {
+    font-size: 0.8rem;
+  }
+
+  #video-container {
+    margin-bottom: 25px;
+  }
+
+  #video-container iframe {
+    height: 180px;
+    width: 230px;
+  }
+
+  .link-div {
+
+  margin: 30px;
+}
+
+  .hp-link {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 421px) and (max-width: 620px) {
+  .main {
+    width: 75%;
+  }
+
+  #recipe-name {
+    font-size: 2.3rem;
+  }
+
+  .recipe-h2 {
+    font-size: 1.8rem;
+  }
+
+  #recipe-image {
+    height: 150px;
+    width: 150px;
+  }
+
+  #ingredients,
+  #instructions {
+    font-size: 1.3rem;
+  }
+
+  #video-container iframe {
+    height: 200px;
+    width: 300px;
+  }
+
+  .hp-link {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 621px) and (max-width: 1024px) {
+  .main {
+    width: 70%;
+  }
+
+  #recipe-name {
+    font-size: 2.8rem;
+  }
+
+  .recipe-h2 {
+    font-size: 2.5rem;
+  }
+
+  #recipe-image {
+    height: 210px;
+    width: 210px;
+  }
+
+  #ingredients,
+  #instructions {
+    font-size: 1.5rem;
+  }
+
+  #video-container iframe {
+    height: 280px;
+    width: 420px;
+  }
+
+  .hp-link {
+    padding: 0.7rem;
+    font-size: 1rem;
+  }
+}
