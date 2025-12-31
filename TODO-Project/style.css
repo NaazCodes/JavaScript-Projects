@@ -1,0 +1,68 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-color: #c6abab;
+}
+
+h1{
+    text-align: center;
+
+}
+
+input, button{
+    padding: 10px;
+    font-size: 16px;
+}
+
+#todoInput{
+    width: 70%;
+    border-radius: 8px;
+    border: 1.5px solid gray;
+}
+
+#addBtn{
+    margin-left: 10px;
+    border-radius: 5px;
+    width: 8%;
+    border: 1px solid gray;
+    background-color: rgb(144, 99, 99);
+    color: white
+}
+
+#addBtn:hover{
+    cursor: pointer;
+    background-color: rgb(103, 70, 70);
+}
+
+.dltBtn{
+    border-radius: 5px;
+    width: 5%;
+    border: 1px solid gray;
+    background-color: rgb(208, 16, 16);
+    color: white
+}
+
+.dltBtn:hover{
+    background-color: rgb(116, 7, 7);
+    cursor: pointer;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
